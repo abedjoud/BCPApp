@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BCP Office Key Contact" max_length="40" name="x_caw_bcp_office_key_contact" type="collection">
+        <element label="BCP Questionnaire" max_length="32" name="bcp_questionnaire" reference="x_caw_bcp_questionnaire" type="reference"/>
+        <element label="Business Phone" max_length="40" name="business_phone" type="string"/>
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <element label="Mobile Phone" max_length="40" name="mobile_phone" type="string"/>
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Title" max_length="40" name="title" type="string"/>
+        <element label="User Reference" max_length="32" name="user_reference" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user_reference"/>
+        </index>
+        <index name="index2">
+            <element name="bcp_questionnaire"/>
+        </index>
+    </element>
+</database>

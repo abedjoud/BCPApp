@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>42dcd29e9386020062281f10077ffb27</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="cmdb_identifier_entry">
+    <cmdb_identifier_entry action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <allow_fallback>false</allow_fallback>
+        <allow_null_attribute>true</allow_null_attribute>
+        <attributes>port,protocol,ip_address,host,host_name</attributes>
+        <condition/>
+        <exact_count_match>false</exact_count_match>
+        <identifier display_value="cmdb_ci_endpoint_mapi_hub">46dcd29e9386020062281f10077ffb27</identifier>
+        <order>100</order>
+        <sys_class_name>cmdb_identifier_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-08-25 14:46:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>42dcd29e9386020062281f10077ffb27</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2015-08-25 14:49:22</sys_updated_on>
+        <table>cmdb_ci_endpoint_mapi_hub</table>
+    </cmdb_identifier_entry>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:46:16</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>57133e91132762001a9a5d322244b010</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_57133e91132762001a9a5d322244b010</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:46:16</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

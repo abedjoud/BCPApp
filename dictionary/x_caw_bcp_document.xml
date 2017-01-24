@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="dms_document" label="BCP Document" max_length="40" name="x_caw_bcp_document" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Office Location" mandatory="true" max_length="32" name="office_location" reference="cmn_location" type="reference"/>
+        <element label="Recipient" mandatory="true" max_length="32" name="recipient" reference="sys_user" type="reference"/>
+        <element label="Template" mandatory="true" max_length="32" name="template" reference="x_caw_bcp_template" type="reference"/>
+        <index name="index">
+            <element name="template"/>
+        </index>
+        <index name="index2">
+            <element name="recipient"/>
+        </index>
+        <index name="index3">
+            <element name="office_location"/>
+        </index>
+    </element>
+</database>

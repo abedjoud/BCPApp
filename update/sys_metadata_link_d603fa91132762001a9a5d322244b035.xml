@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>6c2deab3ff100200ab8fffffffffffea</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="cmdb_identifier">
+    <cmdb_identifier action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_to>cmdb_ci_endpoint_ftp</applies_to>
+        <description>SW:FTP(S)</description>
+        <independent>true</independent>
+        <name>FTP(S)</name>
+        <sys_class_name>cmdb_identifier</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-06-04 07:58:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6c2deab3ff100200ab8fffffffffffea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2015-08-02 08:38:02</sys_updated_on>
+    </cmdb_identifier>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:45:56</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d603fa91132762001a9a5d322244b035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_d603fa91132762001a9a5d322244b035</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:45:56</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

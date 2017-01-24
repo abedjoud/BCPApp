@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>getBCPImage</name>
+        <scoped_name>x_caw_bcp_getBCPImage</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-16 19:06:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>3bc702a8133b66001a9a5d322244b00c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>getBCPImage</sys_name>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_ui_macro_3bc702a8133b66001a9a5d322244b00c</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-16 19:58:27</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="true" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate var="jvar_url" object="true">
+	var URL = "";
+	var grURL = new GlideRecord("x_caw_bcp_template_image");
+		grURL.addQuery("name","${jvar_imagename}");
+		grURL.query();
+	while(grURL.next()){
+		 URL = grURL.image.getDisplayValue();
+	}
+	URL;	
+</g:evaluate>
+${jvar_url}
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

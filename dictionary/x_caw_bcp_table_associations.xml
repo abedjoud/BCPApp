@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Table Associations" max_length="40" name="x_caw_bcp_table_associations" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element default="0" label="Max Required" max_length="40" name="max_required" type="integer"/>
+        <element default="0" label="Min Required" max_length="40" name="min_required" type="integer"/>
+        <element dependent="table" dependent_on_field="table" label="Questionnaire Field" mandatory="true" max_length="80" name="questionnaire_field" type="field_name" use_dependent_field="true"/>
+        <element display="true" label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+    </element>
+</database>

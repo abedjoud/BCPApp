@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>f7009b40bf003100216a85ce2c0739fb</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="cxs_searcher_config">
+    <cxs_searcher_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <interleave>false</interleave>
+        <name>Pinned Knowledge only</name>
+        <short_description>Provides search results from pinned knowledge articles</short_description>
+        <sys_class_name>cxs_searcher_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2014-10-24 12:34:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f7009b40bf003100216a85ce2c0739fb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2014-10-24 12:35:36</sys_updated_on>
+    </cxs_searcher_config>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:47:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>42437e91132762001a9a5d322244b0b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_42437e91132762001a9a5d322244b0b2</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:47:00</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

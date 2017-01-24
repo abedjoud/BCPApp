@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BCP Essential Function" max_length="40" name="x_caw_bcp_essential_function" type="collection">
+        <element label="BCP Questionnaire" max_length="32" name="bcp_questionnaire" reference="x_caw_bcp_questionnaire" type="reference"/>
+        <element label="Description" max_length="10000" name="description" type="string"/>
+        <element display="true" label="Function" max_length="40" name="function" type="string"/>
+        <index name="index">
+            <element name="bcp_questionnaire"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_caw_bcp_template">
+    <x_caw_bcp_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>Template Test</name>
+        <number>BCPTMPL0001006</number>
+        <preview><![CDATA[<html><head><title> BCP Plan for ${test_office_addresses}</title><style></style></head><body><h1>Publish Date:</h1>${test_publish_date}<br /><h1>Essential Functions:</h1> <br />${test_essential_functions_list_bulleted} <br /><h1>Site Coordinators List:</h1> <br />${test_site_coordinators_list_none}<br /><h1>Primary Assembly Location:</h1> <br />${test_assembly_location_item_1}<br /><h1>Secondary Assembly Location: </h1> <br />${test_assembly_location_item_2}<br /><h1>Primary Continuity Location</h1> <br />${test_continuity_location_item_1} <br /><h1>Seconday Continuity Location</h1> <br />${test_continuity_location_item_2} <br /><h1>Employee Resource Requirements</h1> <br />${test_emp_res_req_table} <br /><h1> Application requirements</h1> <br /><table style="height:2in"><tr class="header"><td>Application</td><td>Description</td><td>Application Servers Onsite?<br />Y/N</td></tr></table>				${test_application_requirement_table}			 <br /><h1>Office Contact List</h1> <br /><table style="height:2in"><tr class="header"><td colspan="2">Local Office Contact List</td></tr></table>				${test_office_contact_list}			 <br /><h1> Vendor List</h1> <br /><table style="height:2in;"><tr class="header"><td>Vendor Name</td><td>Contact Name</td><td>Contact Title</td><td>Address</td><td>Phone</td><td>Email</td></tr></table>				${test_vendor_table}			 <br /><h1> Key contacts table</h1> <br /><table style="height:2in;"><tr class="header"><td>Customer Name</td><td>Contact Name</td><td>Contact Title</td><td>Address</td><td>Phone</td><td>Email</td></tr></table>				${test_key_contacts_table}			 <br /><h1>Additional Information</h1> <br />${test_additional_information} <br /></body></html>]]></preview>
+        <sys_class_name>x_caw_bcp_template</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-16 04:14:08</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>899d32d0133766001a9a5d322244b022</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Template Test</sys_name>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>x_caw_bcp_template_899d32d0133766001a9a5d322244b022</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-16 19:47:24</sys_updated_on>
+        <template>&lt;html&gt;&#13;
+&lt;head&gt;&#13;
+&lt;title&gt; BCP Plan for ${test_office_addresses}&lt;/title&gt;&#13;
+&lt;style&gt;&#13;
+body{&#13;
+background-image: URL(${getBCPImage:CBCP});&#13;
+background-cover:contain;&#13;
+}&#13;
+&lt;/style&gt;&#13;
+&lt;/head&gt;&#13;
+&lt;body&gt;&#13;
+&lt;h1&gt;Publish Date:&lt;/h1&gt;&#13;
+${test_publish_date}&#13;
+&lt;br /&gt;&#13;
+&lt;h1&gt;Essential Functions:&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_essential_functions_list_bulleted}&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt;Site Coordinators List:&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_site_coordinators_list_none}&#13;
+&lt;br /&gt;&#13;
+&lt;h1&gt;Primary Assembly Location:&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_assembly_location_item_1}&#13;
+&lt;br /&gt;&#13;
+&lt;h1&gt;Secondary Assembly Location: &lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_assembly_location_item_2}&#13;
+&lt;br /&gt;&#13;
+&lt;h1&gt;Primary Continuity Location&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_continuity_location_item_1}&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt;Seconday Continuity Location&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_continuity_location_item_2}&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt;Employee Resource Requirements&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_emp_res_req_table}&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt; Application requirements&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;table style="height:2in"&gt;&#13;
+					&lt;tr class="header"&gt;&#13;
+						&lt;td&gt;Application&lt;/td&gt;&#13;
+						&lt;td&gt;Description&lt;/td&gt;&#13;
+						&lt;td&gt;Application Servers Onsite?&lt;br /&gt;Y/N&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+				${test_application_requirement_table}&#13;
+			&lt;/table&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt;Office Contact List&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;table style='height:2in'&gt;&#13;
+					&lt;tr class="header"&gt;&#13;
+						&lt;td colspan="2"&gt;Local Office Contact List&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+				${test_office_contact_list}&#13;
+			&lt;/table&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt; Vendor List&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;table style="height:2in;"&gt;&#13;
+					&lt;tr class="header"&gt;&#13;
+						&lt;td&gt;Vendor Name&lt;/td&gt;&#13;
+						&lt;td&gt;Contact Name&lt;/td&gt;&#13;
+						&lt;td&gt;Contact Title&lt;/td&gt;&#13;
+						&lt;td&gt;Address&lt;/td&gt;&#13;
+						&lt;td&gt;Phone&lt;/td&gt;&#13;
+						&lt;td&gt;Email&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+				${test_vendor_table}&#13;
+			&lt;/table&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt; Key contacts table&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;table style="height:2in;"&gt;&#13;
+					&lt;tr class="header"&gt;&#13;
+						&lt;td&gt;Customer Name&lt;/td&gt;&#13;
+						&lt;td&gt;Contact Name&lt;/td&gt;&#13;
+						&lt;td&gt;Contact Title&lt;/td&gt;&#13;
+						&lt;td&gt;Address&lt;/td&gt;&#13;
+						&lt;td&gt;Phone&lt;/td&gt;&#13;
+						&lt;td&gt;Email&lt;/td&gt;&#13;
+					&lt;/tr&gt;&#13;
+				${test_key_contacts_table}&#13;
+			&lt;/table&gt;&#13;
+ &lt;br /&gt;&#13;
+&lt;h1&gt;Additional Information&lt;/h1&gt;&#13;
+ &lt;br /&gt;&#13;
+${test_additional_information}&#13;
+ &lt;br /&gt;&#13;
+&lt;/body&gt;&#13;
+&lt;/html&gt;</template>
+    </x_caw_bcp_template>
+</record_update>

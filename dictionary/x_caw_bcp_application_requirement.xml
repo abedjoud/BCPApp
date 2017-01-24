@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BCP Application Requirement" max_length="40" name="x_caw_bcp_application_requirement" type="collection">
+        <element display="true" label="Application" max_length="40" name="application" type="string"/>
+        <element label="Application Server Onsite" max_length="40" name="application_server_onsite" type="boolean"/>
+        <element label="BCP Questionnaire" max_length="32" name="bcp_questionnaire" reference="x_caw_bcp_questionnaire" type="reference"/>
+        <element label="Description" max_length="10000" name="description" type="string"/>
+        <index name="index">
+            <element name="bcp_questionnaire"/>
+        </index>
+    </element>
+</database>

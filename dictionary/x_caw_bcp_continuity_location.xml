@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BCP Continuity Location" max_length="40" name="x_caw_bcp_continuity_location" type="collection">
+        <element label="BCP Questionnaire" max_length="32" name="bcp_questionnaire" reference="x_caw_bcp_questionnaire" type="reference"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Contact Reference" max_length="32" name="contact_reference" reference="sys_user" type="reference"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element label="Location Reference" max_length="32" name="location_reference" reference="cmn_location" type="reference"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <element label="Street" max_length="255" name="street" type="string"/>
+        <element label="Zip" max_length="40" name="zip" type="string"/>
+        <index name="index">
+            <element name="contact_reference"/>
+        </index>
+        <index name="index2">
+            <element name="location_reference"/>
+        </index>
+        <index name="index3">
+            <element name="bcp_questionnaire"/>
+        </index>
+    </element>
+</database>

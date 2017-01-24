@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>The Primary BCP Admin Group that will have the BCP Admin (x_caw_bcp.admin) role.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_caw_bcp.AdminGroup</name>
+        <read_roles>x_caw_bcp.admin</read_roles>
+        <suffix>AdminGroup</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-11-28 01:03:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>bff42d6a135be6001a9a5d322244b0d0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_caw_bcp.AdminGroup</sys_name>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_properties_bff42d6a135be6001a9a5d322244b0d0</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-11-28 03:02:15</sys_updated_on>
+        <type>string</type>
+        <value>BCP Admin</value>
+        <write_roles>x_caw_bcp.admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=bff42d6a135be6001a9a5d322244b0d0"/>
+</record_update>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BCP Employee and Resource Requirement" max_length="40" name="x_caw_bcp_employee_and_resource_requirement" type="collection">
+        <element label="BCP Questionnaire" max_length="32" name="bcp_questionnaire" reference="x_caw_bcp_questionnaire" type="reference"/>
+        <element label="1 Day" max_length="40" name="req_1_day" type="integer"/>
+        <element label="2 Days" max_length="40" name="req_2_days" type="integer"/>
+        <element label="3 Days" max_length="40" name="req_3_days" type="integer"/>
+        <element label="4+ Days" max_length="40" name="req_4_plus_days" type="integer"/>
+        <element label="Less than 8 hours" max_length="40" name="req_less_than_8_hours" type="integer"/>
+        <element display="true" label="Title" max_length="40" name="title" type="string"/>
+        <index name="index">
+            <element name="bcp_questionnaire"/>
+        </index>
+    </element>
+</database>

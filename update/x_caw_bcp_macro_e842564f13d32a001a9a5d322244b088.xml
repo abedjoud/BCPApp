@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_caw_bcp_macro">
+    <x_caw_bcp_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>emp_res_req_table</name>
+        <scoped_name/>
+        <sys_class_name>x_caw_bcp_macro</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-11-29 17:41:52</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e842564f13d32a001a9a5d322244b088</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>emp_res_req_table</sys_name>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>x_caw_bcp_macro_e842564f13d32a001a9a5d322244b088</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-16 05:48:41</sys_updated_on>
+        <template/>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate var="jvar_output" object="true">
+		var grRes = new GlideRecord("x_caw_bcp_employee_and_resource_requirement");
+			grRes.addQuery("bcp_questionnaire","${jvar_questionnaire}");
+			grRes.query();
+		var output = "";
+		
+		while(grRes.next()){
+			output += "<tr>"
+			output += "<td><b>" + grRes.title + "</b></td>";
+			output += "<td>" + grRes.req_less_than_8_hours + "</td>";
+			output += "<td>" + grRes.req_1_day + "</td>";
+			output += "<td>" + grRes.req_2_days + "</td>";
+			output += "<td>" + grRes.req_3_days + "</td>";
+			output += "<td>" + grRes.req_4_plus_days + "</td>";
+			output += "</tr>"
+			
+		}
+		
+		output = output.replace("\n","<br />");
+		output;
+	</g:evaluate>
+		<table>
+					<tr class="header">
+						<td>Resources</td>
+						<td>&lt; 8 hrs.</td>
+						<td>1 Day</td>
+						<td>2 Days</td>
+						<td>3 Days</td>
+						<td>&gt; 4 Days</td>
+					</tr>
+			<script>
+				document.write("${jvar_output}");
+			</script>
+		</table>
+</j:jelly>]]></xml>
+    </x_caw_bcp_macro>
+</record_update>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="f642914013db26001a9a5d322244b088" sys_domain="global" table="x_caw_bcp_table_associations" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>table</element>
+            <position>0</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>4a69fec4135f26001a9a5d322244b0f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>1</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>ca69fec4135f26001a9a5d322244b0f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>4e69fec4135f26001a9a5d322244b0f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>questionnaire_field</element>
+            <position>3</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>ce69fec4135f26001a9a5d322244b0f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>4269fec4135f26001a9a5d322244b0f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>5</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>c269fec4135f26001a9a5d322244b0f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>min_required</element>
+            <position>6</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>4669fec4135f26001a9a5d322244b0f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>c669fec4135f26001a9a5d322244b0f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_required</element>
+            <position>8</position>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 12:45:39</sys_created_on>
+            <sys_id>4a69fec4135f26001a9a5d322244b0f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caw_bcp_table_associations" sys_domain="global" view="Default view">f642914013db26001a9a5d322244b088</sys_ui_section>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 12:45:39</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_caw_bcp_table_associations</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>abed.joud</sys_created_by>
+            <sys_created_on>2016-11-20 05:15:09</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f642914013db26001a9a5d322244b088</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_caw_bcp_table_associations</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+            <sys_update_name>sys_ui_section_f642914013db26001a9a5d322244b088</sys_update_name>
+            <sys_updated_by>abed.joud</sys_updated_by>
+            <sys_updated_on>2016-11-20 05:15:09</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

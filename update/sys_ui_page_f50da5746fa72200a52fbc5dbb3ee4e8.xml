@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function validateComments() {
+   //This script is called when the user clicks "OK" in the dialog window
+ 
+   //Make sure there are comments to submit
+   var comments = gel("dialog_comments").value;
+   comments = trim(comments);
+ 
+   //If there are comments, close the dialog window and submit them
+   GlideDialogWindow.get().destroy(); //Close the dialog window
+   g_form.setValue("revision_reason", comments); 
+	gsftSubmit(null, g_form.getFormElement(), 'request_revisit');
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_caw_bcp_reason_for_revision.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:ui_form>
+   <!-- Set up form fields and labels -->
+   <table width="100%">
+	   <tr>
+		   <td>
+			   Please add a reason for Revision
+		   </td>
+	   </tr>
+     <tr>
+       <td>
+		   <textarea name="dialog_comments" id="dialog_comments" placeholder="Describe yourself here..." style="width:100%;"></textarea>
+       </td>
+     </tr>
+     <tr>
+       <td colspan="2">
+       </td>
+     </tr>
+     <tr id="dialog_buttons">
+        <td colspan="2" align="right">
+           <!-- Add OK/Cancel buttons. Clicking OK calls the validateComments script -->
+           <g:dialog_buttons_ok_cancel ok="return validateComments()" ok_type="button" cancel_type="button" />
+        </td>
+     </tr>
+  </table>
+</g:ui_form>
+	</j:jelly>]]></html>
+        <name>reason_for_revision</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-05 01:27:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f50da5746fa72200a52fbc5dbb3ee4e8</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>reason_for_revision</sys_name>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_ui_page_f50da5746fa72200a52fbc5dbb3ee4e8</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-05 02:10:03</sys_updated_on>
+    </sys_ui_page>
+</record_update>

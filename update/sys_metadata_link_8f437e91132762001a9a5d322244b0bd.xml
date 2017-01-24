@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>1ddbd972c3122100b0449f2974d3aea1</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="project_template_config">
+    <project_template_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <default_elements>calculation_type,rollup,phase_type,start_date,time_constraint,duration</default_elements>
+        <elements>short_description,description,comments,assignment_group,assigned_to,milestone,key_milestone</elements>
+        <link_element>parent</link_element>
+        <name>Sub Task</name>
+        <order>2</order>
+        <parent>pm_project_task</parent>
+        <post_process>false</post_process>
+        <sys_class_name>project_template_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2014-08-06 17:13:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1ddbd972c3122100b0449f2974d3aea1</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2014-09-26 16:49:00</sys_updated_on>
+        <table>pm_project_task</table>
+    </project_template_config>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:47:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8f437e91132762001a9a5d322244b0bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_8f437e91132762001a9a5d322244b0bd</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:47:04</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

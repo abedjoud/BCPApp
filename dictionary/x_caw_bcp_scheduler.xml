@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sysauto_script" label="BCP Scheduler" max_length="40" name="x_caw_bcp_scheduler" type="collection">
+        <element label="BCP Document" max_length="32" name="bcp_document" reference="x_caw_bcp_document" type="reference"/>
+        <index name="index">
+            <element name="bcp_document"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>4882bb76d7622100f2d224837e6103f9</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_layout">
+    <sc_layout action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <sc_add_to_cart_button>true</sc_add_to_cart_button>
+        <sc_add_to_cart_label>Add To Cart</sc_add_to_cart_label>
+        <sc_additional_text>true</sc_additional_text>
+        <sc_attachment>true</sc_attachment>
+        <sc_back_catalog_button>false</sc_back_catalog_button>
+        <sc_back_catalog_label>Back to Catalog</sc_back_catalog_label>
+        <sc_bookmark_request>false</sc_bookmark_request>
+        <sc_cancel_request_button>false</sc_cancel_request_button>
+        <sc_cancel_request_label/>
+        <sc_checkout_button>true</sc_checkout_button>
+        <sc_checkout_label>Checkout</sc_checkout_label>
+        <sc_choose_options_button>true</sc_choose_options_button>
+        <sc_choose_options_label>Choose Options</sc_choose_options_label>
+        <sc_clone_checkout_button>false</sc_clone_checkout_button>
+        <sc_continue_browsing_button>false</sc_continue_browsing_button>
+        <sc_continue_shopping_button>true</sc_continue_shopping_button>
+        <sc_continue_shopping_label>Continue Shopping</sc_continue_shopping_label>
+        <sc_delete_item_button>true</sc_delete_item_button>
+        <sc_delete_item_label>Delete</sc_delete_item_label>
+        <sc_delivery_details>false</sc_delivery_details>
+        <sc_delivery_time>true</sc_delivery_time>
+        <sc_delivery_time_column>true</sc_delivery_time_column>
+        <sc_description_column>true</sc_description_column>
+        <sc_descriptions>true</sc_descriptions>
+        <sc_edit_cart_button>true</sc_edit_cart_button>
+        <sc_edit_cart_label>Edit Cart</sc_edit_cart_label>
+        <sc_edit_item_button>true</sc_edit_item_button>
+        <sc_edit_item_label>Edit</sc_edit_item_label>
+        <sc_frequency_subtotal>true</sc_frequency_subtotal>
+        <sc_home_button>false</sc_home_button>
+        <sc_home_label>Home</sc_home_label>
+        <sc_intro_text>true</sc_intro_text>
+        <sc_item_edit_column>true</sc_item_edit_column>
+        <sc_order_button>false</sc_order_button>
+        <sc_order_guide_column>true</sc_order_guide_column>
+        <sc_order_item_button>false</sc_order_item_button>
+        <sc_order_item_label/>
+        <sc_order_now_button>true</sc_order_now_button>
+        <sc_order_now_label>Order Now</sc_order_now_label>
+        <sc_order_placed_date>false</sc_order_placed_date>
+        <sc_ordered_item_link>false</sc_ordered_item_link>
+        <sc_padlock_button>false</sc_padlock_button>
+        <sc_price>true</sc_price>
+        <sc_price_column>true</sc_price_column>
+        <sc_proceed_checkout_button>true</sc_proceed_checkout_button>
+        <sc_proceed_checkout_label>Proceed to Checkout</sc_proceed_checkout_label>
+        <sc_quantity>true</sc_quantity>
+        <sc_quantity_column>true</sc_quantity_column>
+        <sc_recurring_price>true</sc_recurring_price>
+        <sc_recurring_subtotal>true</sc_recurring_subtotal>
+        <sc_req_item_number_column>false</sc_req_item_number_column>
+        <sc_req_wf_stage_column>false</sc_req_wf_stage_column>
+        <sc_request_number>false</sc_request_number>
+        <sc_requested_for>true</sc_requested_for>
+        <sc_shipping_address>true</sc_shipping_address>
+        <sc_shipping_location>false</sc_shipping_location>
+        <sc_special_instructions>true</sc_special_instructions>
+        <sc_subtotal>true</sc_subtotal>
+        <sc_total>true</sc_total>
+        <sc_total_column>true</sc_total_column>
+        <sc_update_cart_button>true</sc_update_cart_button>
+        <sc_update_cart_label>Update Cart</sc_update_cart_label>
+        <sc_visible>true</sc_visible>
+        <short_description>Page used to display and edit the contents of the shopping cart when two step checkout enabled</short_description>
+        <sys_class_name>sc_layout</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2014-08-19 14:26:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4882bb76d7622100f2d224837e6103f9</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2015-04-15 14:05:40</sys_updated_on>
+        <target>cart_view_two_step</target>
+        <target_type>browser_screen</target_type>
+        <title>Shopping Cart</title>
+    </sc_layout>
+    <sys_translated_text action="delete_multiple" query="documentkey=4882bb76d7622100f2d224837e6103f9"/>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:47:49</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4a73be91132762001a9a5d322244b0e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_4a73be91132762001a9a5d322244b0e0</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:47:49</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

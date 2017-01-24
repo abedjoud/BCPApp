@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>527b5dafff700200b18affffffffff89</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="std_change_properties">
+    <std_change_properties action="INSERT_OR_UPDATE">
+        <catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</catalog>
+        <category display_value="Standard Changes">b0fdfb01932002009ca87a75e57ffbe9</category>
+        <default_values>short_description=Include a title for your change no greater than 100 characters^description=Describe what you plan to do^implementation_plan=List the steps in order of completion that will be worked through when implementing this change.&#13;
+&#13;
+Note who will perform each step and whether there are dependencies between steps.^backout_plan=Describe the steps you will take to revert the change to its pre-implementation state.&#13;
+&#13;
+At what point during the implementation will you take the decision to backout your change?&#13;
+&#13;
+Does your change window include time to backout if you need to?^test_plan=Explain what testing you have done or will do prior to implementation that gives you confidence this change will be successful.&#13;
+&#13;
+Describe the tests that will be carried out after implementation to confirm that the change has been successful.^EQ</default_values>
+        <fields_to_copy>assignment_group,backout_plan,category,description,justification,implementation_plan,short_description,test_plan</fields_to_copy>
+        <internal_name>main_config</internal_name>
+        <mandatory_fields>short_description,description,implementation_plan,backout_plan,test_plan</mandatory_fields>
+        <readonly_fields>description,backout_plan,test_plan,implementation_plan,short_description</readonly_fields>
+        <restricted_fields>risk,active,approval,approval_history,approval_set,close_code,close_notes,closed_at,closed_by,state,type,wf_activity,sys_created_on,sys_created_by,sys_domain,opened_at,opened_by,sys_updated_on,sys_updated_by,sys_mod_count</restricted_fields>
+        <short_description/>
+        <sys_class_name>std_change_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2015-06-28 04:11:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>527b5dafff700200b18affffffffff89</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2015-07-08 16:00:15</sys_updated_on>
+    </std_change_properties>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:48:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5093fe91132762001a9a5d322244b0dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_5093fe91132762001a9a5d322244b0dc</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:48:15</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

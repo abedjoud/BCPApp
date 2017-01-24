@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="BCP Contact Base" max_length="40" name="x_caw_bcp_contact_base" type="collection">
+        <element label="BCP Questionnaire" max_length="32" name="bcp_questionnaire" reference="x_caw_bcp_questionnaire" type="reference"/>
+        <element display="true" label="Company Name" max_length="40" name="company_name" type="string"/>
+        <element label="Company Reference" max_length="32" name="company_reference" reference="core_company" type="reference"/>
+        <element label="Contact Name" max_length="40" name="contact_name" type="string"/>
+        <element label="Contact Reference" max_length="32" name="contact_reference" reference="sys_user" type="reference"/>
+        <element label="Email" max_length="255" name="email" type="string"/>
+        <element label="Address" max_length="1000" name="location" type="string"/>
+        <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Title" max_length="40" name="title" type="string"/>
+        <index name="index">
+            <element name="contact_reference"/>
+        </index>
+        <index name="index2">
+            <element name="company_reference"/>
+        </index>
+        <index name="index3">
+            <element name="bcp_questionnaire"/>
+        </index>
+    </element>
+</database>

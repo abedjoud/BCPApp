@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caw_bcp.BCPManager</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>BCPManager</name>
+        <script><![CDATA[var BCPManager = Class.create();
+/*BCPManager.prototype = {
+    initialize: function() {
+    },
+
+    type: 'BCPManager'
+};*/
+x_caw_bcp.BCPManager.createQuestionnaireBatch = function(){
+	gs.info("Starting Create Questionnaire Batch");
+	var exclusionList = "";
+	var grSchedules = new GlideRecord("x_caw_bcp_scheduler");
+	grSchedules.addQuery("bcp_document","!=","");
+	grSchedules.addQuery("active",true);
+	grSchedules.query();
+	while(grSchedules.next()){
+		exclusionList += grSchedules.bcp_document + ",";
+	}
+	var BCPs = new GlideRecord("x_caw_bcp_document");
+		BCPs.addQuery("sys_id","NOT IN",exclusionList);
+		BCPs.addQuery("state","NOT IN","inactive,cancelled");
+		BCPs.addQuery("active",true);
+		BCPs.query();
+		while(BCPs.next()){
+			x_caw_bcp.BCPManager.createBCPQuestionnaire(BCPs.sys_id);
+			gs.info("Created Questionnaire for " + BCPs.office_location);
+			
+		}
+}
+BCPManager.importPreviousData = function(Questionnaire){
+	var grQuestionnaire = new GlideRecord("x_caw_bcp_questionnaire");
+		grQuestionnaire.get(Questionnaire);
+	
+	var BCPD = grQuestionnaire.bcp_document;
+	
+	grQuestionnaire = new GlideRecord("x_caw_bcp_questionnaire");
+	grQuestionnaire.addQuery("state","active");
+	grQuestionnaire.addQuery("bcp_document",BCPD);
+	grQuestionnaire.query();
+	if(grQuestionnaire.hasNext()){
+		grQuestionnaire.next();
+		
+		//Implement Logic for Previous Linking! 
+		//Get the Table Associations Table
+		var grTableAssociations = new GlideRecord("x_caw_bcp_table_associations");
+			grTableAssociations.addQuery("active",true);
+			grTableAssociations.query();
+		
+		while(grTableAssociations.next()){
+			var grTable = new GlideRecord(grTableAssociations.table.toString());
+				grTable.addQuery(grTableAssociations.questionnaire_field.toString(),grQuestionnaire.sys_id);
+				grTable.query();
+			while(grTable.next()){
+				var newRecord = new GlideRecord(grTableAssociations.table.toString());
+					newRecord.initialize();
+				for(var key in grTable){
+					if(key != "sys_id"){
+							newRecord.setValue(key,grTable.getValue(key));
+					}
+				}
+				newRecord[grTableAssociations.questionnaire_field.toString()] = Questionnaire;
+				newRecord.insert();
+			}
+		}
+		
+		grQuestionnaire.state = "retired";
+		grQuestionnaire.update();
+	}
+}
+x_caw_bcp.BCPManager.createBCPQuestionnaire = function(BCP_ID){
+	var BCP = new GlideRecord("x_caw_bcp_document");
+		BCP.get(BCP_ID);
+	if(BCP.active){
+		var grQuestionnaire = new GlideRecord("x_caw_bcp_questionnaire");
+			grQuestionnaire.initialize();
+			grQuestionnaire.bcp_document=BCP.sys_id;
+			grQuestionnaire.state = "pending";
+			grQuestionnaire.due_on = gs.daysAgo(gs.getProperty("x_caw_bcp.TimeLimit")*-1);
+		var ID = grQuestionnaire.insert();
+		BCPManager.importPreviousData(ID);
+		BCPManager.dispatchEmail(BCP.recipient, grQuestionnaire);
+		return ID;
+	}else{
+		return false;
+	}
+}
+BCPManager.dispatchEmail = function(Recipient,Questionnaire){
+	if(Questionnaire.due_in >= gs.getProperty("x_caw_bcp.TimeLimit")){
+		gs.eventQueue("x_caw_bcp.dispatchemail",Questionnaire, Recipient);
+	}else{
+		if(Questionnaire.due_in > 0){
+			gs.eventQueue("x_caw_bcp.dispatchreminderemail",Questionnaire, Recipient);
+		}else{
+			gs.eventQueue("x_caw_bcp.dispatchpastdueemail",Questionnaire, Recipient);
+		}
+	}
+	Questionnaire.last_sent_notification_date = new GlideDateTime().getDisplayValue();
+	Questionnaire.update();
+}
+x_caw_bcp.BCPManager.sendReminders = function(){
+	
+	var shouldContinue = true;
+	
+	//Get All Pending Questionnaires
+	var grQuestionnaire = new GlideRecord("x_caw_bcp_questionnaire");
+		grQuestionnaire.addQuery("state","pending");
+		grQuestionnaire.query();
+	
+	var dateThreshold = new GlideDateTime();
+	
+	var Interval = gs.getProperty("x_caw_bcp.Interval");
+	switch(Interval){
+		case "Daily":
+			dateThreshold = gs.daysAgoStart(0);
+			break;
+		case "Weekly":
+			dateThreshold = gs.daysAgoStart(7);
+			break;
+		case "Bi-Weekly":
+			dateThreshold = gs.daysAgoStart(14);
+			break;
+		case "Bi-Monthly":
+			dateThreshold = gs.daysAgoStart(15);
+			break;
+		case "Monthly":
+			dateThreshold = gs.daysAgoStart(30);
+			break;
+		default:
+			shouldContinue = false;
+			break;
+	}
+	if(shouldContinue){
+		while(grQuestionnaire.next()){
+			grQuestionnaire.due_in -= 1;
+			if(grQuestionnaire.due_in < 0){
+				grQuestionnaire.state = "Past Due";
+			}
+		if(grQuestionnaire.last_sent_notification_date < dateThreshold){
+				BCPManager.dispatchEmail(grQuestionnaire.bcp_document.recipient,grQuestionnaire);
+		}
+			grQuestionnaire.update();
+		}
+	}
+}
+BCPManager.generateBCP = function(Questionnaire){
+	//Get The Template
+	var grTemplate = Questionnaire.bcp_document.template;
+	var objMacros = {};
+	
+	var grMacros = new GlideRecord("x_caw_bcp_macro");
+		grMacros.addQuery("template",grTemplate.sys_id);
+		grMacros.addQuery("active",true);
+		grMacros.query();
+	while(grMacros.next()){
+		//Run Macro and assign it into the objMacros
+		var grScopedScript = new GlideRecord("sys_script");
+			grScopedScript.initialize();
+			grScopedScript.script = 'var macroRunner = new GlideJellyRunner();macroRunner.setVariable("jvar_questionnaire",Questionnaire);macroRunner.runMacro(macro);';
+		var gseEvaluator = new GlideScopedEvaluator();
+			gseEvaluator.putVariable("macro",grMacros.name);
+			gseEvaluator.putVariable("Questionnaire",Questionnaire.sys_id.toString());
+			objMacros[grMacros.name] = gseEvaluator.evaluateScript(grScopedScript,"script",null);
+	}
+	
+	var output = grTemplate.template;
+	//gs.addInfoMessage(output);
+	for(var key in objMacros){
+		output = output.replace("${"+key+"}",objMacros[key]);
+	}
+	//Check for images:
+	var re = /\$\{(.*?)\}/g;
+	var arrImages = [];
+	var objImages = {};
+	arrImages = output.match(re);
+	for(i=0;i<arrImages.length;i++){
+		//Parse the UI Macro to retrieve the URL DATA
+		var MacroNameWithImage = arrImages[i].replace("${","").replace("}","");
+		var MacroName = "x_caw_bcp_" + MacroNameWithImage.split(":")[0];
+		var ImageName = MacroNameWithImage.split(":")[1];
+		var grScopedScript = new GlideRecord("sys_script");
+			grScopedScript.initialize();
+			grScopedScript.script = 'var macroRunner = new GlideJellyRunner();macroRunner.setVariable("jvar_imagename",ImageName);macroRunner.runMacro(macro);';
+		var gseEvaluator = new GlideScopedEvaluator();
+			gseEvaluator.putVariable("macro",MacroName);
+			gseEvaluator.putVariable("ImageName",ImageName);
+			objImages[arrImages[i]] = gseEvaluator.evaluateScript(grScopedScript,"script",null);
+	}
+	
+	//Do Replacements
+	for(var key in objImages){
+		output = output.replace(key,objImages[key].replace("\n",""));
+	}
+	//Output HTML Document
+	var bcpName = Questionnaire.bcp_document.office_location.name+".html";
+	var attacher = new GlideSysAttachment();
+		attacher.write(Questionnaire,bcpName,"text/html",output);
+	gs.eventQueue("x_caw_bcp.created",Questionnaire,BCPManager.getIncumbentGroup());
+	Questionnaire.state = "active";
+	Questionnaire.update();
+}
+BCPManager.getIncumbentGroup = function(){
+	var GroupName = gs.getProperty("x_caw_bcp.AdminGroup");
+	
+	var grGroup = new GlideRecord("sys_user_group");
+		grGroup.addQuery("name",GroupName);
+		grGroup.query();
+	if(grGroup.hasNext()){
+		grGroup.next();
+		return grGroup.sys_id.toString();
+	}else{
+		return false;
+	}
+}
+BCPManager.RequestRevision = function(ID){
+	var CurrentQuestionnaire = ID;//new GlideRecord("x_caw_bcp_questionnaire");
+		//CurrentQuestionnaire.get(ID);
+	
+	var OtherPendingQuestionnaires = new GlideRecord("x_caw_bcp_questionnaire");
+		OtherPendingQuestionnaires.addQuery("bcp_document",CurrentQuestionnaire.bcp_document);
+		OtherPendingQuestionnaires.addQuery("state","pending");
+		OtherPendingQuestionnaires.query();
+	if(OtherPendingQuestionnaires.hasNext()){
+		gs.addErrorMessage("There is already a Pending Questionnaire for This Document - Please Cancel it Before Requesting a Revision.");
+	}else{
+		gs.eventQueue("x_caw_bcp.dispatchreviseemail",CurrentQuestionnaire, CurrentQuestionnaire.recipient);
+		
+		CurrentQuestionnaire.due_in = gs.getProperty("x_caw_bcp.TimeLimit");
+		CurrentQuestionnaire.last_sent_notification_date = new GlideDateTime();
+		CurrentQuestionnaire.state = "pending";
+		CurrentQuestionnaire.update();
+	}
+	action.setRedirectURL(CurrentQuestionnaire);
+}
+BCPManager.ValidateOptions = function(ID){
+	//Start by getting tables
+	var grTables = new GlideRecord("x_caw_bcp_table_associations");
+		grTables.addQuery("active",true);
+		grTables.query();
+	
+	var bError = false;
+	
+	while(grTables.next()){
+		//Make sure the Mins/Maxs are proper
+		var grRecord = new GlideRecord(grTables.table.toString());
+			grRecord.addQuery(grTables.questionnaire_field.toString(),ID.sys_id.toString());
+			grRecord.query();
+		if(!((grRecord.getRowCount() <= grTables.max_required || grTables.max_required == 0) && grRecord.getRowCount() >= grTables.min_required)){
+			if(!bError)
+				gs.addErrorMessage("Invalid Submission");
+			bError = true;
+			gs.addErrorMessage(grRecord.getClassDisplayValue() + " must have a Minimum of " + grTables.min_required + " records and a Maximum of " + grTables.max_required + " records. Current: " + grRecord.getRowCount());
+		}
+	}
+	return !bError;
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-11-19 10:18:23</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>87fb4d77138726001a9a5d322244b0a8</sys_id>
+        <sys_mod_count>64</sys_mod_count>
+        <sys_name>BCPManager</sys_name>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_script_include_87fb4d77138726001a9a5d322244b0a8</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2017-01-19 08:44:23</sys_updated_on>
+    </sys_script_include>
+</record_update>

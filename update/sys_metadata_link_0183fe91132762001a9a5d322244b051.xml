@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>4c64bf76d7622100f2d224837e6103c3</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_layout_ui_macro_mtom">
+    <sc_layout_ui_macro_mtom action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <order>800</order>
+        <sc_layout display_value="Shopping Cart">4882bb76d7622100f2d224837e6103f9</sc_layout>
+        <sys_class_name>sc_layout_ui_macro_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2014-08-19 14:34:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4c64bf76d7622100f2d224837e6103c3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope/>
+        <sys_ui_macro display_value="sc_cart_view_buttons">4110ff61ff31210057b2ffffffffff7d</sys_ui_macro>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2014-10-10 10:59:35</sys_updated_on>
+    </sc_layout_ui_macro_mtom>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>abed.joud</sys_created_by>
+        <sys_created_on>2016-12-06 19:48:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0183fe91132762001a9a5d322244b051</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Business Continuity Planning" source="x_caw_bcp">01052477134726001a9a5d322244b072</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Business Continuity Planning">01052477134726001a9a5d322244b072</sys_scope>
+        <sys_update_name>sys_metadata_link_0183fe91132762001a9a5d322244b051</sys_update_name>
+        <sys_updated_by>abed.joud</sys_updated_by>
+        <sys_updated_on>2016-12-06 19:48:01</sys_updated_on>
+        <tablename>sys_metadata</tablename>
+    </sys_metadata_link>
+</record_update>

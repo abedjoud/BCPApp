@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_caw_bcp_contact_base" label="BCP Critical Vendor" max_length="40" name="x_caw_bcp_critical_vendor" type="collection"/>
+</database>
